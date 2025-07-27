@@ -1,11 +1,10 @@
 {
   "name": "grabbit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
-    "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html --dist-dir dist --public-url ./Grabbit/",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html --dist-dir dist --public-url /Grabbit/",
+    "deploy": "npm run build && npx gh-pages -d dist"
   },
   "devDependencies": {
     "@types/react": "^18.3.23",

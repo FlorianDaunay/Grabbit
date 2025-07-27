@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import AuthPage from "./pages/AuthPage";
 import HomePage from "./pages/HomePage";
 import { useAuth } from "./firebase/useAuth";
 
 const App: React.FC = () => {
     const { user } = useAuth();
-
+    console.log("here in app");
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/login" element={<AuthPage />} />
                 <Route
@@ -17,7 +17,7 @@ const App: React.FC = () => {
                 />
 
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
